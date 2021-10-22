@@ -8,7 +8,6 @@ const socialMidias = {
 function changeSocialMediaLinks() {
   for (let li of socialLinks.children) {
     const social = li.getAttribute('class')
-    // console.log(social)
     li.children[0].href = `https://${social}.com/${socialMidias[social]}`
   }
 }
@@ -27,7 +26,6 @@ function getGithubAPI() {
       userPic.src = data.avatar_url
       userLogin.textContent = data.login
     })
-  console.log(url)
 }
 
 getGithubAPI()
